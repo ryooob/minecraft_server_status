@@ -1,5 +1,3 @@
 require "minecraft_server_status/version"
-
-module MinecraftServerStatus
-  # Your code goes here...
-end
+require "minecraft_server_status/query"
+require "minecraft_server_status/result"
