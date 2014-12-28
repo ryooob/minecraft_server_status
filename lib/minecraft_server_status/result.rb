@@ -31,7 +31,16 @@ module MinecraftServerStatus
     end
 
     def export_favicon(dir_path=nil, file_name=nil)
-      raise RuntimeError.new('server must be alive') if !alive? || favicon.nil?
+      if !alive?
+        warn "server must be alive"
+        return nil
+      end
+
+      if favicon.nil?
+        warn "favicon is not found"
+        return nil
+      end
+
       dir_path  ||= File.dirname(__FILE__) + '/'
       file_name ||= Time.now.strftime("%Y%m%d_%H%M%S") + '.png'
       file_path = dir_path + file_name
