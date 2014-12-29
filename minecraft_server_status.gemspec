@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ryo.oba.ggl@gmail.com"]
   spec.summary       = %q{Ruby gem for retrieving status from Minecraft server}
   spec.description   = %q{Ruby gem for retrieving status from Minecraft server}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ryooob/minecraft_server_status"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
